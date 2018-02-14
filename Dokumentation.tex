@@ -1,0 +1,154 @@
+%
+% Main document
+% ===========================================================================
+% This is part of the document "Project documentation template".
+% Authors: brd3, kaa1, ldd1
+%
+
+\documentclass{bfh_template}												
+%---------------------------------------------------------------------------
+\input{essentials/data}
+
+% Title Page and Abstract
+%---------------------------------------------------------------------------
+\begin{document}                              	% Start Document
+\include{vorspann/cover}
+\include{vorspann/versionen}
+
+\cleardoubleemptypage
+\setcounter{page}{1}
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Management Summary}
+\markboth{Management Summary}{Management Summary}			% für Kopfzeile
+\include{vorspann/management_summary}
+\cleardoubleemptypage
+%---------------------------------------------------------------------------
+
+% Table of contents
+%---------------------------------------------------------------------------
+\tableofcontents
+\cleardoublepage
+%---------------------------------------------------------------------------
+
+% Main part:
+%---------------------------------------------------------------------------
+\pagenumbering{arabic}
+
+%\include{kapitel/Einleitung}
+%\include{kapitel/Hardware}
+%\include{kapitel/Theorie}
+%\include{kapitel/Benjamin}
+%\include{kapitel/Software}
+%\include{kapitel/Tests}
+%\include{kapitel/Schlussfolgerung}
+
+\include{chapter/Introduction}
+%\include{kapitel/Hardware}
+%\include{kapitel/Theorie}
+%\include{kapitel/Software}
+%\include{kapitel/Tests}
+%\include{kapitel/Schlussfolgerung}
+%---------------------------------------------------------------------------
+
+% Selbständigkeitserklärung
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Selbständigkeitserklärung}
+\markboth{Selbständigkeitserklärung}{Selbständigkeitserklärung}			% für Kopfzeile
+\include{vorspann/selbstaendigkeitserklaerung}
+%---------------------------------------------------------------------------
+
+% Glossary
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Glossar}
+\renewcommand{\glossaryname}{Glossar}
+\printglossary
+%---------------------------------------------------------------------------
+
+% Bibliography
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+%\bibliographystyle{IEEEtranS}
+%\bibliographystyle{IEEEtranN}
+\bibliographystyle{IEEEtranSA}	% beste bis jetzt [Abc06]
+%\bibliographystyle{unsrt}
+\bibliography{datenbanken/bibliography}{}
+%---------------------------------------------------------------------------
+
+% Listings
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+\listoftables
+%---------------------------------------------------------------------------
+
+% Index
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Stichwortverzeichnis}
+\renewcommand{\indexname}{Stichwortverzeichnis}
+\printindex
+%---------------------------------------------------------------------------
+
+% Abkürzungsverzeichnis
+%---------------------------------------------------------------------------
+\cleardoublepage
+\phantomsection 
+\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+\chapter*{Abkürzungsverzeichnis}
+\markboth{Abkürzungsverzeichnis}{Abkürzungsverzeichnis}			% für Kopfzeile
+
+%Bei erster Verwendung Kurz- und Langform, dann Kurzform \ac{PRU} \\
+%Immer Kurzform \acs{PRU} \\
+%Immer Kurz- und Langform \acf{PRU} \\
+%Immer Langform \acl{PRU}
+
+\begin{acronym}[aaaaaaaaaa]
+
+%\renewcommand{\aclabelfont}[1]{\ifstr{#1}{}{}{\normalfont{\normalsize{#1}}\dotfill}} %Normale Schriftart mit Serifen
+%\setlength{\itemsep}{-\parsep} % geringerer Zeilenabstand 
+
+\acro{BGR}{Blau Grün Rot}
+\acro{GUI}{grafischen Benutzeroberfläche}
+\acro{IDE}{Integrierte Entwicklungsumgebung}
+\acro{LoG}{Laplacian of Gaussian}
+\acro{NAS}{Network Attached Storage}
+\acro{PTP}{Picture Transfer Protocol}
+\acro{PWM}{Pulsweitenmodulation}
+\acro{PUR}{Polyurethan}
+\acro{PE}{Polyethylen}
+\acro{PMMA}{Polymethylmethacrylat}
+\acro{PP}{Polypropylen}
+
+% Falls die Mehrzahl einer Abkürzung nicht mit s endet.
+%\acroplural{PRU}[PRU's]{Programmable Realtime Unit}
+\end{acronym}
+%---------------------------------------------------------------------------
+
+% Attachment:
+%---------------------------------------------------------------------------
+\cleardoublepage  % von mir
+\phantomsection   % von mir
+\appendix
+\settocdepth{section}
+%\include{anhang/Zeitplan}
+%\include{anhang/Faktoren}
+%\include{anhang/GeräteSoftware}
+%\include{anhang/inhaltCDROM}
+%---------------------------------------------------------------------------
+
+%---------------------------------------------------------------------------
+\end{document}
+
