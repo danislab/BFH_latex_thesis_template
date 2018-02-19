@@ -1,0 +1,79 @@
+%
+% Project documentation template
+% ===========================================================================
+% This is part of the document "Project documentation template".
+% Authors: brd3, kaa1
+%
+
+\begin{titlepage}
+
+% BFH-Logo absolute placed at (28,12) on A4 and picture (16:9 or 15cm x 8.5cm)
+% Actually not a realy satisfactory solution but working.
+%---------------------------------------------------------------------------
+\setlength{\unitlength}{1mm}
+\begin{textblock}{120}[0,0](28,12)
+	\includegraphics[scale=1.0]{essentials/BFH_Logo_A_en_100_4CU.eps}
+\end{textblock}
+
+\iftoggle{coverpicture}{
+	\begin{textblock}{154}(28,48)
+		\begin{picture}(150,2)
+			\put(0,0){\color{bfhgrey}\rule{150mm}{2mm}}
+		\end{picture}
+	\end{textblock}
+	
+	\begin{textblock}{154}[0,0](28,50)
+		\includegraphics[scale=1.0]{essentials/placeholder.jpg}
+	\end{textblock}
+	
+	\begin{textblock}{154}(28,135)
+		\begin{picture}(150,2)
+			\put(0,0){\color{bfhgrey}\rule{150mm}{2mm}}
+		\end{picture}
+	\end{textblock}
+	\color{black}
+}
+
+\begin{flushleft}
+\vspace*{\iftoggle{coverpicture}{115mm}{21mm}}
+
+%\begin{textblock}{150}(28,153)
+\begin{textblock}{150}(28,\iftoggle{coverpicture}{153}{52})
+\fontsize{26pt}{28pt}\selectfont 
+\mytitle 				\\
+\vspace{2mm}
+
+\fontsize{16pt}{20pt}\selectfont\vspace{0.3em}
+\mysubtitle 			\\
+\vspace{5mm}
+
+\fontsize{10pt}{12pt}\selectfont
+\textbf{\mytype} \\
+\vspace{3mm}
+
+\end{textblock}
+
+\begin{textblock}{150}(28,190)
+\fontsize{10pt}{12pt}\selectfont
+\myabstract \\ 
+\end{textblock}
+
+\begin{textblock}{150}(28,225)
+\fontsize{10pt}{17pt}\selectfont
+\mysidenote
+
+\end{textblock}
+\end{flushleft}
+
+\begin{textblock}{150}(28,280)
+\noindent 
+\color{bfhgrey}\fontsize{9pt}{10pt}\selectfont
+Berner Fachhochschule | Haute école spécialisée bernoise | Bern University of Applied Sciences
+\color{black}\selectfont
+\end{textblock}
+
+\end{titlepage}
+
+% ==========================================================================
+% EOF
+%

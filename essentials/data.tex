@@ -1,0 +1,25 @@
+\providecommand{\mytitle}{Title with four words}		%  Hier den Titel des Berichts/Thesis eingeben
+\providecommand{\mysubtitle}{Subtitle here with five words}
+\providecommand{\mytype}{Type of work}
+\providecommand{\myname}{Luder Daniel}
+\providecommand{\versionnumber}{1.0.0}			%  Hier die aktuelle Versionsnummer eingeben
+\providecommand{\versiondate}{25.06.2017}		%  Hier das Datum der aktuellen Version eingeben
+\providecommand{\myabstract}{Hier kommt das Abstrakt hin. Ich weiss nicht, ob das mit mehreren Wörtern auf merheren Zeilen geht. Dies soll als Test gelten.}
+
+\providecommand{\mysidenote}{
+\begin{tabbing}
+xxxxxxxxxxxxxxx\=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \kill
+Studiengang:	\> Elektro- und Kommunikationstechnik		\\
+Autoren:		\> \myname 									\\
+Datum:			\> \versiondate								\\
+Version:		\> \versionnumber							\\
+\end{tabbing}
+}
+
+\AtBeginDocument{
+  \hypersetup{
+    pdftitle = {\mytitle},
+    pdfsubject = {\mysubtitle},
+    pdfauthor = {\myname}
+  }
+}
