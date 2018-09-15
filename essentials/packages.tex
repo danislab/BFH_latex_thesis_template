@@ -1,0 +1,85 @@
+% Load Standard Packages:
+%---------------------------------------------------------------------------
+\usepackage[standard-baselineskips]{cmbright}
+
+\usepackage[ngerman]{babel}												% german hyphenation
+\usepackage[latin1]{inputenc}  											% Unix/Linux - load extended character set (ISO 8859-1)
+%\usepackage[ansinew]{inputenc}  										% Windows - load extended character set (ISO 8859-1)
+\usepackage[T1]{fontenc}												% hyphenation of words with ä,ö and ü
+\usepackage{textcomp}													% additional symbols
+\usepackage{ae}															% better resolution of Type1-Fonts 
+\usepackage{etoolbox}													% color manipulation of header and footer
+\usepackage{graphicx}                      								% integration of images
+\usepackage{float}														% floating objects
+\usepackage{caption}													% for captions of figures and tables
+\usepackage{booktabs}													% package for nicer tables
+\usepackage{tocvsec2}													% provides means of controlling the sectional numbering
+%---------------------------------------------------------------------------
+
+% Eigene Packete
+%---------------------------------------------------------------------------
+\usepackage{hhline}														% Dicke Linien in Tabellen
+\usepackage{listings}													% Fuer Terminal Ausgabe
+\usepackage{scrhack}													% clears warning \float@addtolists detected!
+\usepackage{xcolor}
+\usepackage{titling}													% to use title author in document
+
+\usepackage{etoolbox}
+
+
+
+
+% Packages:
+%---------------------------------------------------------------------------
+%\usepackage{fancyhdr}					% simple manipulation of header and footer
+%\usepackage{pdflscape}					% allow switching to landscape
+%\usepackage{multicol}					% allows the creation of multicols
+%\usepackage{chngcntr}					% allows changing the context of counters
+%\usepackage{pdfpages}
+%\usepackage[standard-baselineskips]{cmbright}		% Computer Modern Bright fonts (a family of sans serif fonts)
+%\usepackage[utf8]{inputenc}				% load charset UTF8
+%\usepackage[T1]{fontenc}				% hyphenation of words with , and
+%\usepackage{ae}						% better resolution of Type1-Fonts
+%\usepackage{graphicx}					% integration of images
+%\usepackage{float}					% floating objects
+%\usepackage{caption}					% for captions of figures and tables
+%\usepackage{booktabs}					% package for nicer tables
+%\usepackage{tocvsec2}					% provides means of controlling the sectional numbering
+%\usepackage{lmodern}					% use modern font
+%\usepackage{titlesec}
+%\usepackage{wrapfig}
+%\usepackage[export]{adjustbox}
+%\usepackage{lastpage}
+%\usepackage[ngerman, num]{isodate}
+%\usepackage{amsmath}					% various features to facilitate writing math formulas
+%\usepackage{amsthm}					% enhanced version of latex's newtheorem
+%\usepackage{amsfonts}					% set of miscellaneous TeX fonts that augment the standard CM
+%\usepackage{amssymb}					% mathematical special characters
+%\usepackage{exscale}					% mathematical size corresponds to textsize
+%\usepackage{multirow}					% multirow emables combining rows in tables
+%\usepackage{tabularx}
+%\usepackage{tcolorbox}
+%\usepackage{csvsimple}
+%\usepackage{color}
+%\usepackage{listings}
+%\usepackage[acronym, toc]{glossaries}
+%\usepackage{lipsum}
+%---------------------------------------------------------------------------
+% new bibliography using biber and biblatex
+%    >> breaks cite package. Patch below provides
+%    >> a patch to use cite
+%---------------------------------------------------------------------------
+%\usepackage[
+%    backend=biber,
+%    style=ieee-alphabetic,
+%    sortlocale=de_DE,
+%    natbib=true,
+%    url=true,
+%    doi=true,
+%    eprint=false
+%]{biblatex}
+%\usepackage{xpatch}
+%\makeatletter
+%\xpatchcmd{\@citex}{\bfseries ?}{\bfseries\expandafter\strip@prefix\meaning\@citeb}{}{}
+%\makeatother
+%---------------------------------------------------------------------------

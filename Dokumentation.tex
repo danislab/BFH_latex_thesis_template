@@ -5,26 +5,33 @@
 % Authors: brd3, kaa1, ldd1
 %
 
-\documentclass{bfh_template}												
-%---------------------------------------------------------------------------
-\input{essentials/data}
 
+%---------------------------------------------------------------------------
+% define document class
+%---------------------------------------------------------------------------
+\documentclass{bfh_template}
+%\input{bfh_template.tex}												
+\input{essentials/data}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
 % Title Page and Abstract
 %---------------------------------------------------------------------------
 \begin{document}                              	% Start Document
 \include{essentials/cover}
 \include{essentials/versionen}
-
-\cleardoubleemptypage
-\setcounter{page}{1}
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Management Summary}
-\markboth{Management Summary}{Management Summary}			% für Kopfzeile
-\include{essentials/management_summary}
-\cleardoubleemptypage
 %---------------------------------------------------------------------------
 
+
+%---------------------------------------------------------------------------
+% Management Summary
+%---------------------------------------------------------------------------
+\include{essentials/management_summary}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
 % Table of contents
 %---------------------------------------------------------------------------
 \tableofcontents
@@ -34,23 +41,11 @@
 % Main part:
 %---------------------------------------------------------------------------
 \pagenumbering{arabic}
-
-%\include{kapitel/Einleitung}
-%\include{kapitel/Hardware}
-%\include{kapitel/Theorie}
-%\include{kapitel/Benjamin}
-%\include{kapitel/Software}
-%\include{kapitel/Tests}
-%\include{kapitel/Schlussfolgerung}
-
 \include{chapter/Introduction}
-%\include{kapitel/Hardware}
-%\include{kapitel/Theorie}
-%\include{kapitel/Software}
-%\include{kapitel/Tests}
-%\include{kapitel/Schlussfolgerung}
 %---------------------------------------------------------------------------
 
+
+%---------------------------------------------------------------------------
 % Selbständigkeitserklärung
 %---------------------------------------------------------------------------
 \cleardoublepage
@@ -60,6 +55,8 @@
 \include{essentials/selbstaendigkeitserklaerung}
 %---------------------------------------------------------------------------
 
+
+%---------------------------------------------------------------------------
 % Glossary
 %---------------------------------------------------------------------------
 \cleardoublepage
@@ -69,18 +66,19 @@
 \printglossary
 %---------------------------------------------------------------------------
 
+
+%---------------------------------------------------------------------------
 % Bibliography
 %---------------------------------------------------------------------------
 \cleardoublepage
 \phantomsection 
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
-%\bibliographystyle{IEEEtranS}
-%\bibliographystyle{IEEEtranN}
 \bibliographystyle{IEEEtranSA}	% beste bis jetzt [Abc06]
-%\bibliographystyle{unsrt}
 \bibliography{datenbanken/bibliography}{}
 %---------------------------------------------------------------------------
 
+
+%---------------------------------------------------------------------------
 % Listings
 %---------------------------------------------------------------------------
 \cleardoublepage
@@ -93,7 +91,9 @@
 \listoftables
 %---------------------------------------------------------------------------
 
-% Index
+
+%---------------------------------------------------------------------------
+% Stichwortverzeichnis
 %---------------------------------------------------------------------------
 \cleardoublepage
 \phantomsection 
@@ -102,13 +102,15 @@
 \printindex
 %---------------------------------------------------------------------------
 
+
+%---------------------------------------------------------------------------
 % Abkürzungsverzeichnis
 %---------------------------------------------------------------------------
 \cleardoublepage
 \phantomsection 
 \addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
 \chapter*{Abkürzungsverzeichnis}
-\markboth{Abkürzungsverzeichnis}{Abkürzungsverzeichnis}			% für Kopfzeile
+\markboth{Abkürzungsverzeichnis}{Abkürzungsverzeichnis} % for header
 
 %Bei erster Verwendung Kurz- und Langform, dann Kurzform \ac{PRU} \\
 %Immer Kurzform \acs{PRU} \\
@@ -116,10 +118,6 @@
 %Immer Langform \acl{PRU}
 
 \begin{acronym}[aaaaaaaaaa]
-
-%\renewcommand{\aclabelfont}[1]{\ifstr{#1}{}{}{\normalfont{\normalsize{#1}}\dotfill}} %Normale Schriftart mit Serifen
-%\setlength{\itemsep}{-\parsep} % geringerer Zeilenabstand 
-
 \acro{BGR}{Blau Grün Rot}
 \acro{GUI}{grafischen Benutzeroberfläche}
 \acro{IDE}{Integrierte Entwicklungsumgebung}
@@ -137,6 +135,8 @@
 \end{acronym}
 %---------------------------------------------------------------------------
 
+
+%---------------------------------------------------------------------------
 % Attachment:
 %---------------------------------------------------------------------------
 \cleardoublepage  % von mir
@@ -144,11 +144,9 @@
 \appendix
 \settocdepth{section}
 %\include{anhang/Zeitplan}
-%\include{anhang/Faktoren}
-%\include{anhang/GeräteSoftware}
-%\include{anhang/inhaltCDROM}
 %---------------------------------------------------------------------------
+
 
 %---------------------------------------------------------------------------
 \end{document}
-
+%---------------------------------------------------------------------------
